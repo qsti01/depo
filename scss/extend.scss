@@ -1,0 +1,20 @@
+%flex-row{
+	display: flex;
+}
+%flex-column{
+	display: flex;
+	flex-direction: column;
+}
+%gray{
+	color: #6F767E;
+}
+%black{
+	color: #000000;
+}
+%absolute{
+	position: absolute;
+}
+%input-clear{
+	background: none;
+	border: none;
+}
