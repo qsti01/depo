@@ -339,12 +339,12 @@
 			line-height: 32px; 
 		}
 		img {
-			height: auto;
-			bottom: -4504px;
-			position: absolute;
-			top: auto;
-			width: 456px;
-			right: 21%;
+			display: none;
+		}
+		.wrapper{
+			height: 100%;
+			background: url('../images/ad.png') no-repeat 50% 100%;
+			background-size: 70%;
 		}
 	}
 	footer{
@@ -570,7 +570,7 @@
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
 	body h2 {
 		font-size: 24px;
 		line-height: 32px; 
@@ -600,12 +600,14 @@
 		}
 	}
 	.banner{
+		overflow: hidden;
 		.under_wrapper{
 			display: none;
 		}
 		.wrapper {
 			flex-direction: column;
 			height: 874px;
+			width: 288px;
 		}
 		.banner_calculator .calculator {
 			top: 494px;
@@ -750,7 +752,9 @@
 			line-height: 24px;
 		}
 	}
-
+	.countires {
+		overflow: hidden;
+	}
 
 	footer .socials {
 		width: auto;
@@ -765,7 +769,12 @@
 			line-height: 24px;
 		}
 		img {
-			bottom: -4961px;
+			display: none;
+		}
+		.wrapper{
+			height: 100%;
+			background: url('../images/ad.png') no-repeat 100% 100%;
+			background-size: contain;
 		}
 	}
 	.overlay-burger .burger {

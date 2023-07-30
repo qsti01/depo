@@ -82,6 +82,7 @@ $(document).mouseup(function (e) {
 
 
 // ДВИЖЕНИЕ МОНЕТОК
+
 let coin1 = document.querySelector('.coin1');
 let coin2 = document.querySelector('.coin2');
 let coin3 = document.querySelector('.coin3');

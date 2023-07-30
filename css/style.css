@@ -1507,12 +1507,12 @@ footer .socials div:active svg path {
     line-height: 32px;
   }
   .ad img {
-    height: auto;
-    bottom: -4504px;
-    position: absolute;
-    top: auto;
-    width: 456px;
-    right: 21%;
+    display: none;
+  }
+  .ad .wrapper {
+    height: 100%;
+    background: url("../images/ad.png") no-repeat 50% 100%;
+    background-size: 70%;
   }
   footer {
     height: 104px;
@@ -1723,7 +1723,7 @@ footer .socials div:active svg path {
   }
 }
 /* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   body h2 {
     font-size: 24px;
     line-height: 32px;
@@ -1749,12 +1749,16 @@ footer .socials div:active svg path {
     font-style: normal;
     font-weight: 500;
   }
+  .banner {
+    overflow: hidden;
+  }
   .banner .under_wrapper {
     display: none;
   }
   .banner .wrapper {
     flex-direction: column;
     height: 874px;
+    width: 288px;
   }
   .banner .banner_calculator .calculator {
     top: 494px;
@@ -1885,6 +1889,9 @@ footer .socials div:active svg path {
     font-size: 16px;
     line-height: 24px;
   }
+  .countires {
+    overflow: hidden;
+  }
   footer .socials {
     width: auto;
   }
@@ -1897,7 +1904,12 @@ footer .socials div:active svg path {
     line-height: 24px;
   }
   .ad img {
-    bottom: -4961px;
+    display: none;
+  }
+  .ad .wrapper {
+    height: 100%;
+    background: url("../images/ad.png") no-repeat 100% 100%;
+    background-size: contain;
   }
   .overlay-burger .burger {
     width: 192px;
