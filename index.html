@@ -5,11 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -20,24 +19,49 @@
 			</div>
 			<nav class="header_navigation">
 				<ul>
-					<li><a id='sec-1' href="#one">О нас</a></li>
-					<li><a id='sec-2' href="#two">Как это работает</a></li>
-					<li><a id='sec-3' href="#three">Где работаем</a></li>
-					<li><a id='sec-4' href="#four">FAQ</a></li>
-					<li><a id='sec-5' href="#five">Контакты</a></li>
+					<li><a id='sec-1' href="#section-1">О нас</a></li>
+					<li><a id='sec-2' href="#section-2">Как это работает</a></li>
+					<li><a id='sec-3' href="#section-3">Где работаем</a></li>
+					<li><a id='sec-4' href="#section-4">FAQ</a></li>
+					<li><a id='sec-5' href="#section-5">Контакты</a></li>
 				</ul>
 			</nav>
-			<div class="header_change-language">
-				<select id="input0" style="background-image: url('images/svg/lang-ru.svg');">
-					<option style="background-image: url('images/svg/lang-ru.svg');" value="rus">Русский</option>
-					<option style="background-image: url('images/svg/lang-us.svg');" value="eng">Английский</option>
-				</select>
+			<div class="header_select">
+				<div class="select">
+					<div class="select__header">
+						<span class="select__current">
+							<img src="images/svg/lang-ru.svg" alt="">
+							<div class="lang-ru">Русский</div>
+						</span>
+						<div class="select__icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path d="M15 11L12 14L9 11" stroke="#6F767E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</div>
+					</div>
+					<div class="select__body">
+						<div class="select__item">
+							<img src="images/svg/lang-ru.svg" alt="">
+							<div class="lang-ru">Русский</div>
+						</div>
+						<div class="select__item">
+							<img src="images/svg/lang-us.svg" alt="">
+							<div class="lang-ru">Английский</div>
+						</div>
+					</div>
+				</div>
+				
+
+				
 			</div>
 			<button class="launch-app js-button-campaign">Launch app</button>
+			<button class="header_burger-menu burger-open">
+				<img src="images/svg/burger.svg" alt="">
+			</button>
 		</div>	
 	</header> 
 
-	<section class="banner">
+	<section class="banner" >
 
 		<div class="wrapper banner_wrapper">
 			<div class="banner_text">
@@ -71,11 +95,11 @@
 					</div>
 					<div class="calculator_input">
 						<div class="input_money">
-							<p>$</p>
-							<input type="number" value="350.00">
+							<p class="cal_value">B</p>
+							<input type="number" value="1.00">
 						</div>
 						<div class="course">
-							0 BTC ≈ $0.00
+							1 <span class="value-type">bitcoin</span> ≈ <span class="crypto-course">$0.00</span>
 						</div>
 						<button class="convert">
 							<img src="images/svg/convert.svg" alt="">
@@ -85,12 +109,33 @@
 						<div class="calculator_pay-data-wrapper">
 						<div class="pay-select-data">
 							<p>Pay with</p>
-							<select id="input1" style="background-image: url('images/svg/bitcoin.svg');">
-								<option style="background-image: url('images/svg/bitcoin.svg');" value="bit">Bitcoin</option>
-								<option style="background-image: url('images/svg/ethereum.svg');" value="eth">Ethereum</option>
-								<option style="background-image: url('images/svg/dogecoin.svg');" value="dog">Dogecoin</option>
-							</select>
-							
+							<div class="pay-select__header">
+								<span class="pay-select__current">
+									<img src="images/svg/bitcoin.svg" alt="">
+									<div class="pay-select_value">Bitcoin</div>
+								</span>
+								<div class="pay-select__icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+										<path d="M15 11L12 14L9 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="scale(1.5) translate(-4, -4)"></path>
+									</svg>
+									
+								</div>
+							</div>
+							<div class="pay-select__body">
+								<div class="pay-select__item">
+									<img src="images/svg/bitcoin.svg" alt="">
+									<div class="pay-select_value">bitcoin</div>
+								</div>
+								<div class="pay-select__item">
+									<img src="images/svg/ethereum.svg" alt="">
+									<div class="pay-select_value">ethereum</div>
+								</div>
+								<div class="pay-select__item">
+									<img src="images/svg/dogecoin.svg" alt="">
+									<div class="pay-select_value">dogecoin</div>
+								</div>
+							</div>
+
 						</div>
 						<div class="send-data">
 							<p>Send to</p>
@@ -102,7 +147,7 @@
 						</div>
 						</div>
 					</div>
-					<button class="calculator_continue">Continue Transfer</button>
+					<button class="calculator_continue js-button-campaign">Continue Transfer</button>
 				</div>
 				<div class="calcuclator_under">
 					<div class="blue-big-circle"></div>
@@ -117,24 +162,53 @@
 		<div class="under_wrapper">
 			<div class="banner_under">
 				<div class="scroll-down">
-					<button><img src="images/svg/scroll-down.svg" alt=""></button>
+					<button><img src="images/svg/scroll-down.svg" alt="" ></button>
 					<p>Листайте вниз</p>
 				</div>
 				<div class="socials">
 					<p>Наши социальные сети</p>
 					<div class="facebook">
 						<a href="https://www.facebook.com/">
-							<img src="images/svg/Facebook.svg">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<g clip-path="url(#clip0_84_6583)">
+								<path d="M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 11.993 2.92547 15.3027 6.75 15.9028V10.3125H4.71875V8H6.75V6.2375C6.75 4.2325 7.94438 3.125 9.77172 3.125C10.6467 3.125 11.5625 3.28125 11.5625 3.28125V5.25H10.5538C9.56 5.25 9.25 5.86672 9.25 6.5V8H11.4688L11.1141 10.3125H9.25V15.9028C13.0745 15.3027 16 11.993 16 8Z" fill="#3E8BF3"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_84_6583">
+								<rect width="16" height="16" fill="white"/>
+								</clipPath>
+								</defs>
+							</svg>
 						</a>
 					</div>
 					<div class="twitter">
 						<a href="https://twitter.com/?lang=ru">
-							<img src="images/svg/Twitter.svg">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<g clip-path="url(#clip0_84_6651)">
+									<path d="M5.03344 14.5C11.0697 14.5 14.3722 9.4978 14.3722 5.16124C14.3722 5.02062 14.3691 4.87687 14.3628 4.73624C15.0052 4.27164 15.5597 3.69617 16 3.03687C15.4017 3.30307 14.7664 3.47692 14.1159 3.55249C14.8009 3.14194 15.3137 2.49698 15.5594 1.73718C14.915 2.11904 14.2104 2.38841 13.4756 2.53374C12.9806 2.00771 12.326 1.65941 11.6131 1.5427C10.9003 1.42599 10.1688 1.54737 9.53183 1.88806C8.89486 2.22876 8.38787 2.7698 8.08923 3.42754C7.7906 4.08528 7.71695 4.82308 7.87969 5.52687C6.575 5.46139 5.29862 5.12247 4.13332 4.53207C2.96802 3.94166 1.9398 3.11296 1.11531 2.09968C0.696266 2.82216 0.568038 3.6771 0.756687 4.49073C0.945337 5.30436 1.43671 6.01563 2.13094 6.47999C1.60975 6.46344 1.09998 6.32312 0.64375 6.07061V6.11124C0.643283 6.86943 0.905399 7.60439 1.38554 8.19118C1.86568 8.77797 2.53422 9.18037 3.2775 9.32999C2.7947 9.46209 2.28799 9.48133 1.79656 9.38624C2.0063 10.0383 2.41438 10.6086 2.96385 11.0176C3.51331 11.4265 4.17675 11.6537 4.86156 11.6675C3.69895 12.5807 2.26278 13.0761 0.784375 13.0737C0.522191 13.0733 0.260266 13.0573 0 13.0256C1.5019 13.9892 3.24902 14.5009 5.03344 14.5Z" fill="#3E8BF3"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_84_6651">
+										<rect width="16" height="16" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
 						</a>
 					</div>
 					<div class="instagram">
 						<a href="https://www.instagram.com/">
-							<img src="images/svg/Instagram.svg">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<g clip-path="url(#clip0_84_6654)">
+									<path d="M8 1.44062C10.1375 1.44062 10.3906 1.45 11.2313 1.4875C12.0125 1.52187 12.4344 1.65313 12.7156 1.7625C13.0875 1.90625 13.3563 2.08125 13.6344 2.35938C13.9156 2.64062 14.0875 2.90625 14.2313 3.27813C14.3406 3.55938 14.4719 3.98438 14.5063 4.7625C14.5438 5.60625 14.5531 5.85938 14.5531 7.99375C14.5531 10.1313 14.5438 10.3844 14.5063 11.225C14.4719 12.0063 14.3406 12.4281 14.2313 12.7094C14.0875 13.0813 13.9125 13.35 13.6344 13.6281C13.3531 13.9094 13.0875 14.0813 12.7156 14.225C12.4344 14.3344 12.0094 14.4656 11.2313 14.5C10.3875 14.5375 10.1344 14.5469 8 14.5469C5.8625 14.5469 5.60938 14.5375 4.76875 14.5C3.9875 14.4656 3.56563 14.3344 3.28438 14.225C2.9125 14.0813 2.64375 13.9063 2.36563 13.6281C2.08438 13.3469 1.9125 13.0813 1.76875 12.7094C1.65938 12.4281 1.52813 12.0031 1.49375 11.225C1.45625 10.3813 1.44688 10.1281 1.44688 7.99375C1.44688 5.85625 1.45625 5.60313 1.49375 4.7625C1.52813 3.98125 1.65938 3.55938 1.76875 3.27813C1.9125 2.90625 2.0875 2.6375 2.36563 2.35938C2.64688 2.07812 2.9125 1.90625 3.28438 1.7625C3.56563 1.65313 3.99063 1.52187 4.76875 1.4875C5.60938 1.45 5.8625 1.44062 8 1.44062ZM8 0C5.82813 0 5.55625 0.009375 4.70313 0.046875C3.85313 0.084375 3.26875 0.221875 2.7625 0.41875C2.23438 0.625 1.7875 0.896875 1.34375 1.34375C0.896875 1.7875 0.625 2.23438 0.41875 2.75938C0.221875 3.26875 0.084375 3.85 0.046875 4.7C0.009375 5.55625 0 5.82812 0 8C0 10.1719 0.009375 10.4438 0.046875 11.2969C0.084375 12.1469 0.221875 12.7313 0.41875 13.2375C0.625 13.7656 0.896875 14.2125 1.34375 14.6562C1.7875 15.1 2.23438 15.375 2.75938 15.5781C3.26875 15.775 3.85 15.9125 4.7 15.95C5.55313 15.9875 5.825 15.9969 7.99688 15.9969C10.1688 15.9969 10.4406 15.9875 11.2938 15.95C12.1438 15.9125 12.7281 15.775 13.2344 15.5781C13.7594 15.375 14.2063 15.1 14.65 14.6562C15.0938 14.2125 15.3688 13.7656 15.5719 13.2406C15.7688 12.7313 15.9063 12.15 15.9438 11.3C15.9813 10.4469 15.9906 10.175 15.9906 8.00313C15.9906 5.83125 15.9813 5.55938 15.9438 4.70625C15.9063 3.85625 15.7688 3.27188 15.5719 2.76562C15.375 2.23438 15.1031 1.7875 14.6563 1.34375C14.2125 0.9 13.7656 0.625 13.2406 0.421875C12.7313 0.225 12.15 0.0875 11.3 0.05C10.4438 0.009375 10.1719 0 8 0Z" fill="#3E8BF3"/>
+									<path d="M8 3.89062C5.73125 3.89062 3.89062 5.73125 3.89062 8C3.89062 10.2688 5.73125 12.1094 8 12.1094C10.2688 12.1094 12.1094 10.2688 12.1094 8C12.1094 5.73125 10.2688 3.89062 8 3.89062ZM8 10.6656C6.52813 10.6656 5.33437 9.47188 5.33437 8C5.33437 6.52813 6.52813 5.33437 8 5.33437C9.47188 5.33437 10.6656 6.52813 10.6656 8C10.6656 9.47188 9.47188 10.6656 8 10.6656Z" fill="#3E8BF3"/>
+									<path d="M13.2312 3.72811C13.2312 4.25936 12.8 4.68749 12.2719 4.68749C11.7406 4.68749 11.3125 4.25624 11.3125 3.72811C11.3125 3.19686 11.7438 2.76874 12.2719 2.76874C12.8 2.76874 13.2312 3.19999 13.2312 3.72811Z" fill="#3E8BF3"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_84_6654">
+										<rect width="16" height="16" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
 						</a>
 					</div>
 				</div>
@@ -142,7 +216,7 @@
 		</div>
 	</section>
 
-	<section class="about-us">
+	<section class="about-us" id="section-1">
 		<div class="wrapper">
 			
 			<h2 class="wow animate__animated animate__fadeInLeft">Ведущая платформа <br>
@@ -153,7 +227,7 @@
 		</div>
 	</section>
 
-	<section class="start">
+	<section class="start" id="section-2">
 		<div class="wrapper">
 			<div class="start_top">
 				<h2 class="wow animate__animated animate__fadeInLeft">Совершите обмен <br>
@@ -186,10 +260,68 @@
 					<p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения </p>
 				</div>
 			</div>
+			<div class="start_steps adaptive">
+				<div class="start_block wow animate__animated animate__backInUp" data-wow-delay="0.3s">
+					<img src="images/step1.jpg" alt="">
+					<div class="start_number number-purple">
+						<p>Шаг 1</p>
+					</div>
+					<h3>Создай или найди сделку</h3>
+					<p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения </p>
+				</div>
+				<div class="start_block wow animate__animated animate__backInUp" data-wow-delay="0.6s">
+					<img src="images/step2.jpg" alt="">
+					<div class="start_number number-blue">
+						<p>Шаг 2</p>
+					</div>
+					<h3>Безопасно переведи средства </h3>
+					<p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения </p>
+				</div>
+				<div class="start_block wow animate__animated animate__backInUp" data-wow-delay="0.9s">
+					<img src="images/step3.jpg" alt="">
+					<div class="start_number number-green">
+						<p>Шаг 3</p>
+					</div>
+					<h3>Заверши обмен</h3>
+					<p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения </p>
+				</div>
+			</div>
+			<div class="start_steps mobile">
+				<div class="start_top">
+					<h2 class="wow animate__animated animate__fadeInLeft">Совершите обмен <br>
+						 за 3 шага</h2>
+					<button class="launch-app js-button-campaign">Начать обмен</button>
+				</div>
+				<div class="start_block wow animate__animated animate__backInUp" data-wow-delay="0.3s">
+					<img src="images/step1.jpg" alt="">
+					<div class="start_number number-purple">
+						<p>Шаг 1</p>
+					</div>
+					<h3>Создай или найди сделку</h3>
+					<p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения </p>
+				</div>
+				<div class="start_block wow animate__animated animate__backInUp" data-wow-delay="0.6s">
+					<img src="images/step2.jpg" alt="">
+					<div class="start_number number-blue">
+						<p>Шаг 2</p>
+					</div>
+					<h3>Безопасно переведи средства </h3>
+					<p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения </p>
+				</div>
+				<div class="start_block wow animate__animated animate__backInUp" data-wow-delay="0.9s">
+					<img src="images/step3.jpg" alt="">
+					<div class="start_number number-green">
+						<p>Шаг 3</p>
+					</div>
+					<h3>Заверши обмен</h3>
+					<p>Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения </p>
+				</div>
+			</div>
+			<button class="launch-app launch-app-mobile js-button-campaign ">Начать обмен</button>
 		</div>
 	</section>
 
-	<section class="countires">
+	<section class="countires" id="section-3">
 		<div class="wrapper" >
 			<div class="coutries_lsit wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">
 				<div class="countrie_list-wrapper">
@@ -223,10 +355,35 @@
 				<button class="add-countrie">Подключить мою страну</button>
 			</div>
 			
+			<div class="coutries_lsit-mobile">
+				<div class="countrie_list-wrapper owl-carousel-2">
+					<div class="countrie_block contrie_select">
+						<img src="images/svg/countrie-russia.svg" alt="">
+						<p>Россия</p>
+					</div>
+					<div class="countrie_block">
+						<img src="images/svg/countrie-ukr.svg" alt="">
+						<p>Украина</p>
+					</div>
+					<div class="countrie_block">
+						<img src="images/svg/countrie-turk.svg" alt="">
+						<p>Турция</p>
+					</div>
+					<div class="countrie_block">
+						<img src="images/svg/countrie-kz.svg" alt="">
+						<p>Казахстан</p>
+					</div>
+					<div class="countrie_block">
+						<img src="images/svg/countrie-br.svg" alt="">
+						<p>Беларусь</p>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	</section>
 
-	<section class="faq">
+	<section class="faq" id="section-4">
 		<div class="wrapper">
 			<div class="faq-grid">
 				<div class="text" >
@@ -280,30 +437,59 @@
 		</div>
 	</section>
 
-	<footer>
+	<footer id="section-5">
 		<div class="wrapper">
-			<p>© DEPO 2022</p>
+			<p class="footer_name">© DEPO 2022</p>
 			<div class="links">
 				<p>Terms of Use</p>
 				<p>Privacy policy</p>
 			</div>
 			<div class="socials">
 				<p>Наши социальные сети</p>
-				<div class="facebook">
-					<a href="https://www.facebook.com/">
-						<img src="images/svg/Facebook.svg">
-					</a>
-				</div>
-				<div class="twitter">
-					<a href="https://twitter.com/?lang=ru">
-						<img src="images/svg/Twitter.svg">
-					</a>
-				</div>
-				<div class="instagram">
-					<a href="https://www.instagram.com/">
-						<img src="images/svg/Instagram.svg">
-					</a>
-				</div>
+					<div class="facebook">
+						<a href="https://www.facebook.com/">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<g clip-path="url(#clip0_84_6583)">
+								<path d="M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 11.993 2.92547 15.3027 6.75 15.9028V10.3125H4.71875V8H6.75V6.2375C6.75 4.2325 7.94438 3.125 9.77172 3.125C10.6467 3.125 11.5625 3.28125 11.5625 3.28125V5.25H10.5538C9.56 5.25 9.25 5.86672 9.25 6.5V8H11.4688L11.1141 10.3125H9.25V15.9028C13.0745 15.3027 16 11.993 16 8Z" fill="#3E8BF3"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_84_6583">
+								<rect width="16" height="16" fill="white"/>
+								</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
+					<div class="twitter">
+						<a href="https://twitter.com/?lang=ru">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<g clip-path="url(#clip0_84_6651)">
+									<path d="M5.03344 14.5C11.0697 14.5 14.3722 9.4978 14.3722 5.16124C14.3722 5.02062 14.3691 4.87687 14.3628 4.73624C15.0052 4.27164 15.5597 3.69617 16 3.03687C15.4017 3.30307 14.7664 3.47692 14.1159 3.55249C14.8009 3.14194 15.3137 2.49698 15.5594 1.73718C14.915 2.11904 14.2104 2.38841 13.4756 2.53374C12.9806 2.00771 12.326 1.65941 11.6131 1.5427C10.9003 1.42599 10.1688 1.54737 9.53183 1.88806C8.89486 2.22876 8.38787 2.7698 8.08923 3.42754C7.7906 4.08528 7.71695 4.82308 7.87969 5.52687C6.575 5.46139 5.29862 5.12247 4.13332 4.53207C2.96802 3.94166 1.9398 3.11296 1.11531 2.09968C0.696266 2.82216 0.568038 3.6771 0.756687 4.49073C0.945337 5.30436 1.43671 6.01563 2.13094 6.47999C1.60975 6.46344 1.09998 6.32312 0.64375 6.07061V6.11124C0.643283 6.86943 0.905399 7.60439 1.38554 8.19118C1.86568 8.77797 2.53422 9.18037 3.2775 9.32999C2.7947 9.46209 2.28799 9.48133 1.79656 9.38624C2.0063 10.0383 2.41438 10.6086 2.96385 11.0176C3.51331 11.4265 4.17675 11.6537 4.86156 11.6675C3.69895 12.5807 2.26278 13.0761 0.784375 13.0737C0.522191 13.0733 0.260266 13.0573 0 13.0256C1.5019 13.9892 3.24902 14.5009 5.03344 14.5Z" fill="#3E8BF3"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_84_6651">
+										<rect width="16" height="16" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
+					<div class="instagram">
+						<a href="https://www.instagram.com/">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<g clip-path="url(#clip0_84_6654)">
+									<path d="M8 1.44062C10.1375 1.44062 10.3906 1.45 11.2313 1.4875C12.0125 1.52187 12.4344 1.65313 12.7156 1.7625C13.0875 1.90625 13.3563 2.08125 13.6344 2.35938C13.9156 2.64062 14.0875 2.90625 14.2313 3.27813C14.3406 3.55938 14.4719 3.98438 14.5063 4.7625C14.5438 5.60625 14.5531 5.85938 14.5531 7.99375C14.5531 10.1313 14.5438 10.3844 14.5063 11.225C14.4719 12.0063 14.3406 12.4281 14.2313 12.7094C14.0875 13.0813 13.9125 13.35 13.6344 13.6281C13.3531 13.9094 13.0875 14.0813 12.7156 14.225C12.4344 14.3344 12.0094 14.4656 11.2313 14.5C10.3875 14.5375 10.1344 14.5469 8 14.5469C5.8625 14.5469 5.60938 14.5375 4.76875 14.5C3.9875 14.4656 3.56563 14.3344 3.28438 14.225C2.9125 14.0813 2.64375 13.9063 2.36563 13.6281C2.08438 13.3469 1.9125 13.0813 1.76875 12.7094C1.65938 12.4281 1.52813 12.0031 1.49375 11.225C1.45625 10.3813 1.44688 10.1281 1.44688 7.99375C1.44688 5.85625 1.45625 5.60313 1.49375 4.7625C1.52813 3.98125 1.65938 3.55938 1.76875 3.27813C1.9125 2.90625 2.0875 2.6375 2.36563 2.35938C2.64688 2.07812 2.9125 1.90625 3.28438 1.7625C3.56563 1.65313 3.99063 1.52187 4.76875 1.4875C5.60938 1.45 5.8625 1.44062 8 1.44062ZM8 0C5.82813 0 5.55625 0.009375 4.70313 0.046875C3.85313 0.084375 3.26875 0.221875 2.7625 0.41875C2.23438 0.625 1.7875 0.896875 1.34375 1.34375C0.896875 1.7875 0.625 2.23438 0.41875 2.75938C0.221875 3.26875 0.084375 3.85 0.046875 4.7C0.009375 5.55625 0 5.82812 0 8C0 10.1719 0.009375 10.4438 0.046875 11.2969C0.084375 12.1469 0.221875 12.7313 0.41875 13.2375C0.625 13.7656 0.896875 14.2125 1.34375 14.6562C1.7875 15.1 2.23438 15.375 2.75938 15.5781C3.26875 15.775 3.85 15.9125 4.7 15.95C5.55313 15.9875 5.825 15.9969 7.99688 15.9969C10.1688 15.9969 10.4406 15.9875 11.2938 15.95C12.1438 15.9125 12.7281 15.775 13.2344 15.5781C13.7594 15.375 14.2063 15.1 14.65 14.6562C15.0938 14.2125 15.3688 13.7656 15.5719 13.2406C15.7688 12.7313 15.9063 12.15 15.9438 11.3C15.9813 10.4469 15.9906 10.175 15.9906 8.00313C15.9906 5.83125 15.9813 5.55938 15.9438 4.70625C15.9063 3.85625 15.7688 3.27188 15.5719 2.76562C15.375 2.23438 15.1031 1.7875 14.6563 1.34375C14.2125 0.9 13.7656 0.625 13.2406 0.421875C12.7313 0.225 12.15 0.0875 11.3 0.05C10.4438 0.009375 10.1719 0 8 0Z" fill="#3E8BF3"/>
+									<path d="M8 3.89062C5.73125 3.89062 3.89062 5.73125 3.89062 8C3.89062 10.2688 5.73125 12.1094 8 12.1094C10.2688 12.1094 12.1094 10.2688 12.1094 8C12.1094 5.73125 10.2688 3.89062 8 3.89062ZM8 10.6656C6.52813 10.6656 5.33437 9.47188 5.33437 8C5.33437 6.52813 6.52813 5.33437 8 5.33437C9.47188 5.33437 10.6656 6.52813 10.6656 8C10.6656 9.47188 9.47188 10.6656 8 10.6656Z" fill="#3E8BF3"/>
+									<path d="M13.2312 3.72811C13.2312 4.25936 12.8 4.68749 12.2719 4.68749C11.7406 4.68749 11.3125 4.25624 11.3125 3.72811C11.3125 3.19686 11.7438 2.76874 12.2719 2.76874C12.8 2.76874 13.2312 3.19999 13.2312 3.72811Z" fill="#3E8BF3"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_84_6654">
+										<rect width="16" height="16" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
 			</div>
 		</div>
 	</footer>
@@ -314,9 +500,44 @@
 			<h2>К сожалению наше приложение еще в разработке.</h2>
 			<p>Попробуйте посетить данную страницу позже.</p>
 			<div class="close-popup js-close-campaign"></div>
-			<button class="launch-app">ОК</buttonc>
+			<button class="launch-app js-close-campaign">ОК</buttonc>
 		</div>
 	</div>
+
+	<div class="overlay-burger js-burger-overlay-campaign">
+		<div class="burger js-burger-popup-campaign">
+			<div class="burger_wrapper">
+				<button class="burger_menu-closer js-burger-close-campaign">
+					<img src="images/svg/burger.svg" alt="">
+				</button>
+				<nav class="burger_navigation">
+					<ul>
+						<li><a id='sec-1' href="#section-1" class="js-burger-close-campaign">О нас</a></li>
+						<li><a id='sec-2' href="#section-2" class="js-burger-close-campaign">Как это работает</a></li>
+						<li><a id='sec-3' href="#section-3" class="js-burger-close-campaign">Где работаем</a></li>
+						<li><a id='sec-4' href="#section-4" class="js-burger-close-campaign">FAQ</a></li>
+						<li><a id='sec-5' href="#section-5" class="js-burger-close-campaign">Контакты</a></li>
+					</ul>
+	
+	
+				</nav>
+				<div class="burger-language">
+					<p>Выберите язык</p>
+					<div class="burger-select__body">
+						<div class="burger-select__item js-burger-close-campaign">
+							<img src="images/svg/lang-ru.svg" alt="">
+							<div class="lang-ru">Русский</div>
+						</div>
+						<div class="burger-select__item js-burger-close-campaign">
+							<img src="images/svg/lang-us.svg" alt="">
+							<div class="lang-ru">Английский</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 	<script src="js/wow.min.js"></script>

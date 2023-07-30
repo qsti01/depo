@@ -98,11 +98,11 @@ input {
   src: url("../fonts/inter-v12-cyrillic_latin-800.eot");
   src: url("../fonts/inter-v12-cyrillic_latin-800.eot?#iefix") format("embedded-opentype"), url("../fonts/inter-v12-cyrillic_latin-800.woff2") format("woff2"), url("../fonts/inter-v12-cyrillic_latin-800.woff") format("woff"), url("../fonts/inter-v12-cyrillic_latin-800.ttf") format("truetype"), url("../fonts/inter-v12-cyrillic_latin-800.svg#Inter") format("svg");
 }
-footer .socials div, footer .socials, footer .links, footer .wrapper, .faq .question p, .countires .countries_buttons, .countires .countrie_block, .countires .coutries_lsit, .start .start_number, .start .start_steps, .start .start_top, .about-us .wrapper, .calculator .note-data, .calculator .send-data, .calculator .pay-select-data, .calculator .input_money, .calculator .calculator_tabs, .banner .banner_under .scroll-down, .banner .banner_under .socials div, .banner .banner_under .socials, .banner .banner_under, .banner .banner_text .clipboard-text, .banner .wrapper, header .header_change-language, header nav ul, header nav, header .header_logo, header .header_wrapper {
+footer .socials div, footer .socials, footer .links, footer .wrapper, .faq .question p, .countires .coutries_lsit-mobile .countrie_block, .countires .coutries_lsit-mobile .coutries_lsit, .countires .coutries_lsit-mobile, .countires .countries_buttons, .countires .countrie_block, .countires .coutries_lsit, .start .start_number, .start .start_steps, .start .start_top, .about-us .wrapper, .calculator .note-data, .calculator .send-data, .calculator .pay-select-data, .calculator .calculator_pay-data .pay-select__item, .calculator .calculator_pay-data .pay-select__current, .calculator .calculator_pay-data, .calculator .input_money, .calculator .calculator_tabs, .banner .banner_under .scroll-down, .banner .banner_under .socials div, .banner .banner_under .socials, .banner .banner_under, .banner .banner_text .clipboard-text, .banner .wrapper, header .header_select .select__item, header .header_select .select__current, header .header_select .select, header .header_select, header nav ul, header nav, header .header_logo, header .header_wrapper {
   display: flex;
 }
 
-.countires .countrie_list-wrapper, .calculator .calculator_tabs label, .calculator {
+.countires .coutries_lsit-mobile .countrie_list-wrapper, .countires .countrie_list-wrapper, .calculator .calculator_pay-data .pay-select-data.is-active .pay-select__body, .calculator .calculator_tabs label, .calculator, header .header_select .select.is-active .select__body {
   display: flex;
   flex-direction: column;
 }
@@ -174,23 +174,87 @@ header nav li a:hover {
   color: #3E8BF3;
   border-bottom: 2px solid #3E8BF3;
 }
-header .header_change-language {
+header .header_select {
   margin-left: auto;
-}
-header .header_change-language select {
-  background: none;
-  border: none;
-  padding: 5px 0 5px 20px;
-  background-repeat: no-repeat;
-  text-align: center;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+header .header_select .select {
+  margin: 0 auto;
+  position: relative;
+  z-index: 99999999;
+  width: 140px;
+}
+header .header_select .select.is-active .select__body {
+  z-index: 99999999;
+}
+header .header_select .select__header {
+  cursor: pointer;
+  display: flex;
+  z-index: 99999999;
+  margin: auto 0 auto 0;
+}
+header .header_select .select__header img {
+  width: 20px;
+  height: 20px;
+}
+header .header_select .select__header:hover .lang-ru {
+  filter: invert(50%) sepia(29%) saturate(5041%) hue-rotate(196deg) brightness(100%) contrast(91%);
+}
+header .header_select .select__header:hover svg {
+  filter: invert(50%) sepia(29%) saturate(5041%) hue-rotate(196deg) brightness(100%) contrast(91%);
+}
+header .header_select .select__current {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 8px;
+  z-index: 99999999;
+}
+header .header_select .select__icon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  text-align: center;
+  z-index: 99999999;
+}
+header .header_select .select__body {
+  background-color: #FFFFFF;
+  border-top: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 99999999;
+  width: 168px;
+  height: 104px;
+  display: none;
+  border-radius: 16px;
+  margin: 5px 0 0 0;
+  justify-content: space-around;
+}
+header .header_select .select__body img {
+  width: 20px;
+  height: 20px;
+}
+header .header_select .select__item {
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
-  background-position: 0% 50%;
+  padding: 8px;
+  z-index: 99999999;
+  width: 148px;
+  border-radius: 8px;
+  margin: 0 auto 0 auto;
 }
-header .header_change-language select:focus {
-  background-color: #FFFFFF;
-  border: none;
+header .header_select .select__item:hover {
+  background-color: #F5F9FE;
+}
+header .header_select .lang-ru {
+  margin-left: 5px;
 }
 header button {
   margin: auto 0 auto 50px;
@@ -199,6 +263,9 @@ header button {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+}
+header .header_burger-menu {
+  display: none;
 }
 
 .launch-app {
@@ -332,6 +399,18 @@ header button {
   height: 16px;
   margin: auto;
 }
+.banner .banner_under .socials div:hover {
+  background-color: #3E8BF3;
+}
+.banner .banner_under .socials div:hover svg path {
+  fill: #FFFFFF;
+}
+.banner .banner_under .socials div:active {
+  background-color: #295DA2;
+}
+.banner .banner_under .socials div:active svg path {
+  fill: #FFFFFF;
+}
 .banner .banner_under .socials p {
   margin: auto 24px auto 0;
 }
@@ -410,8 +489,9 @@ header button {
   font-size: 43.4277px;
   line-height: 53px;
   font-family: "Inter";
-  width: 180px;
+  width: 240px;
   border: none;
+  text-align: center;
 }
 .calculator .input_money input[type=number]:focus {
   outline: none;
@@ -453,6 +533,77 @@ header button {
   background: #F5F9FE;
   border-radius: 9px;
   margin: 25px auto 10px auto;
+  margin-left: auto;
+  font-family: "Inter";
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #000000;
+}
+.calculator .calculator_pay-data .pay-select-data.is-active .pay-select__body {
+  z-index: 99999999;
+}
+.calculator .calculator_pay-data .pay-select__header {
+  cursor: pointer;
+  display: flex;
+  z-index: 99999999;
+  margin: auto 0 auto 0;
+}
+.calculator .calculator_pay-data .pay-select__header img {
+  width: 20px;
+  height: 20px;
+}
+.calculator .calculator_pay-data .pay-select__header:hover .pay-select_value {
+  filter: invert(50%) sepia(29%) saturate(5041%) hue-rotate(196deg) brightness(100%) contrast(91%);
+}
+.calculator .calculator_pay-data .pay-select__header:hover svg {
+  filter: invert(50%) sepia(29%) saturate(5041%) hue-rotate(196deg) brightness(100%) contrast(91%);
+}
+.calculator .calculator_pay-data .pay-select__current {
+  z-index: 99999999;
+}
+.calculator .calculator_pay-data .pay-select__icon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  text-align: center;
+  z-index: 99999999;
+  margin-left: 160px;
+}
+.calculator .calculator_pay-data .pay-select__body {
+  background-color: #FFFFFF;
+  border-top: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 99999999;
+  width: 220px;
+  height: 150px;
+  display: none;
+  border-radius: 16px;
+  margin: -220px 0 0 120px;
+  justify-content: space-around;
+}
+.calculator .calculator_pay-data .pay-select__body img {
+  width: 20px;
+  height: 20px;
+}
+.calculator .calculator_pay-data .pay-select__item {
+  cursor: pointer;
+  padding: 8px;
+  z-index: 99999999;
+  width: 200px;
+  border-radius: 8px;
+  margin: 0 0 0 10px;
+}
+.calculator .calculator_pay-data .pay-select__item:hover {
+  background-color: #F5F9FE;
+}
+.calculator .calculator_pay-data .pay-select_value {
+  margin: auto 0 auto 5px;
 }
 .calculator .calculator_pay-data-wrapper {
   width: 375px;
@@ -565,6 +716,12 @@ header button {
 .start .start_steps {
   justify-content: space-between;
 }
+.start .adaptive {
+  display: none;
+}
+.start .mobile {
+  display: none;
+}
 .start .start_block {
   width: 392px;
 }
@@ -602,6 +759,9 @@ header button {
   font-size: 16px;
   line-height: 24px;
   color: #6F767E;
+}
+.start .launch-app-mobile {
+  display: none;
 }
 
 .countires {
@@ -676,6 +836,46 @@ header button {
 .countires .countries_buttons .add-countrie:active {
   background: #BFD8FB;
 }
+.countires .coutries_lsit-mobile {
+  margin: 136px 0 64px 0;
+  width: 157px;
+  height: 248px;
+  background: #F5F9FE;
+  border-radius: 16px;
+  display: none;
+}
+.countires .coutries_lsit-mobile .coutries_lsit {
+  margin: 136px 0 64px 0;
+  width: 157px;
+  height: 248px;
+  background: #F5F9FE;
+  border-radius: 16px;
+}
+.countires .coutries_lsit-mobile .countrie_list-wrapper {
+  width: 141px;
+  height: 232px;
+  margin: auto;
+  justify-content: space-between;
+}
+.countires .coutries_lsit-mobile .countrie_block {
+  width: 141px;
+  height: 40px;
+  border-radius: 8px;
+  padding-left: 16px;
+  margin: auto 0;
+}
+.countires .coutries_lsit-mobile .countrie_block img {
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+}
+.countires .coutries_lsit-mobile .countrie_block p {
+  margin: auto 0 auto 8px;
+  color: #6F767E;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
 
 .faq {
   height: 1140px;
@@ -719,6 +919,9 @@ header button {
 .faq .question .qa-arrow {
   margin-left: auto;
 }
+.faq .question:hover {
+  background-color: #F5F9FE;
+}
 
 .ad {
   height: 520px;
@@ -749,10 +952,10 @@ footer {
 }
 footer .wrapper {
   height: 167px;
-  justify-content: space-between;
 }
 footer .links {
   gap: 30px;
+  margin-left: 35%;
 }
 footer p {
   font-weight: 500;
@@ -763,7 +966,7 @@ footer p {
 footer .socials {
   width: 330px;
   height: 40px;
-  margin: auto 0;
+  margin: auto 0 auto auto;
 }
 footer .socials div {
   width: 40px;
@@ -789,6 +992,18 @@ footer .socials p {
 footer .socials .twitter {
   margin: auto 24px auto 24px;
 }
+footer .socials div:hover {
+  background-color: #3E8BF3;
+}
+footer .socials div:hover svg path {
+  fill: #FFFFFF;
+}
+footer .socials div:active {
+  background-color: #295DA2;
+}
+footer .socials div:active svg path {
+  fill: #FFFFFF;
+}
 
 .overlay {
   position: fixed;
@@ -798,7 +1013,7 @@ footer .socials .twitter {
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
-  z-index: 100;
+  z-index: 999999999;
 }
 .overlay .popup {
   position: absolute;
@@ -860,6 +1075,842 @@ footer .socials .twitter {
   top: 11px;
   transform: rotate(45deg);
   left: -4px;
+}
+
+.overlay-burger {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 999999999;
+}
+.overlay-burger .burger {
+  width: 280px;
+  height: 100%;
+  background: #FFFFFF;
+  margin-left: auto;
+}
+.overlay-burger .burger .burger_menu-closer {
+  position: absolute;
+  right: 1.69%;
+  display: block;
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  top: 28px;
+}
+.overlay-burger .burger .burger_navigation {
+  border-bottom: solid 1px #D9D9D9;
+}
+.overlay-burger .burger .burger_navigation a {
+  text-decoration: none;
+  font-family: "TT Firs Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #6F767E;
+}
+.overlay-burger .burger .burger_navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 84px 0 24px 0;
+}
+.overlay-burger .burger .burger_wrapper {
+  width: 216px;
+  margin: 0 auto;
+}
+.overlay-burger .burger .burger-language {
+  display: none;
+  height: 170px;
+}
+.overlay-burger .burger .burger-language p {
+  margin-top: 24px;
+  color: #6F767E;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+.overlay-burger .burger .burger-language .burger-select__body {
+  z-index: 99999999;
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  width: 216px;
+  margin: 24px 0 0 0;
+}
+.overlay-burger .burger .burger-language .burger-select__body img {
+  width: 20px;
+  height: 20px;
+}
+.overlay-burger .burger .burger-language .burger-select__item {
+  cursor: pointer;
+  padding: 0;
+  z-index: 99999999;
+  width: 148px;
+  border-radius: 8px;
+  margin: 0;
+  display: flex;
+  font-family: "TT Firs Neue";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.overlay-burger .burger .burger-language .burger-select__item:hover {
+  background-color: #F5F9FE;
+}
+.overlay-burger .burger .burger-language .burger-select__item:first-child {
+  margin-bottom: auto;
+}
+.overlay-burger .burger .burger-language .lang-ru {
+  margin-left: 5px;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .countires {
+    background-size: 70%;
+  }
+  .ad img {
+    right: 7.8611111111%;
+  }
+  footer .links {
+    margin-left: 25%;
+  }
+  .start .adaptive {
+    display: flex;
+  }
+  .start_steps .owl-carousel, .no-js .owl-carousel, .owl-carousel.owl-loaded {
+    display: none;
+  }
+  .overlay-burger {
+    display: none;
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  header nav ul {
+    gap: 20px;
+  }
+  header button {
+    margin: auto 0 auto 20px;
+  }
+  .banner .banner_text h1 {
+    font-size: 48px;
+  }
+  .start .adaptive {
+    display: flex;
+  }
+  .start_steps .owl-carousel, .no-js .owl-carousel, .owl-carousel.owl-loaded {
+    display: none;
+  }
+  .start_block img {
+    width: 250px;
+  }
+  .start h3 {
+    font-size: 20px;
+  }
+  .start p {
+    font-size: 13px;
+  }
+  .countires {
+    background-size: 68%;
+  }
+  .faq .faq-grid {
+    grid-template-columns: auto 700px;
+  }
+  .ad img {
+    right: 0;
+    height: auto;
+    width: 420px;
+    top: 3560px;
+  }
+  .start .wrapper {
+    height: 600px;
+  }
+  .start {
+    height: 600px;
+  }
+  .faq {
+    height: 750px;
+  }
+  .ad {
+    height: 420px;
+  }
+  .ad h2 {
+    padding-top: 50px;
+  }
+  .banner .banner_calculator .calculator {
+    margin-left: 56px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+  header .header_burger-menu {
+    display: block;
+    background: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+  header .header_navigation {
+    display: none;
+  }
+  .banner .wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .banner .banner_calculator .calculator {
+    width: 343.23px;
+    height: 361.617px;
+    margin-left: 55px;
+    top: 176px;
+  }
+  .banner .banner_calculator {
+    margin: 0;
+  }
+  .banner .banner_calculator {
+    width: 452.3961486816px;
+    height: 472px;
+    margin: 55px auto 0 auto;
+  }
+  .banner .banner_text h1 {
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    margin: 0 0 32px 0;
+  }
+  .banner .banner_text .launch-app {
+    margin: 0 auto;
+  }
+  .banner .banner_text {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner .banner_text .clipboard-text {
+    margin: 30px auto 0 auto;
+  }
+  .banner .banner_calculator .calculator_top .coin2 {
+    width: 102px;
+    height: 92px;
+    top: -11px;
+    left: 0px;
+  }
+  .banner .banner_calculator .calculator_top .coin1 {
+    width: 30px;
+    height: 30px;
+    top: -31px;
+    left: 94px;
+  }
+  .banner .banner_calculator .calculator_top .coin3 {
+    width: 72px;
+    height: 77px;
+    top: 351px;
+    left: 375px;
+  }
+  .banner .banner_calculator .blue-big-circle {
+    width: 417.885px;
+    height: 417.885px;
+  }
+  .banner .banner_calculator .calcuclator_under .green-arrow {
+    width: 234.659px;
+    height: 214.566px;
+    top: -23px;
+    left: 233px;
+  }
+  .banner .banner_calculator .calcuclator_under .blue-arrow {
+    top: 187px;
+    left: -14px;
+    width: 236.888px;
+    height: 253.83px;
+  }
+  .calculator .calculator_tabs {
+    margin: 26px auto 0 auto;
+  }
+  .calculator .convert {
+    left: 80%;
+    top: 62px;
+  }
+  .calculator .calculator_pay-data {
+    width: 314.578px;
+    height: 142.671px;
+    margin: 10px auto 10px auto;
+  }
+  .calculator .pay-select-data {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .calculator .pay-select-data {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 47px;
+  }
+  .calculator .pay-select-data p {
+    margin-left: 15px;
+  }
+  .calculator .send-data {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 47px;
+  }
+  .calculator .send-data p {
+    margin-left: 15px;
+  }
+  .calculator .note-data {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 47px;
+  }
+  .calculator .note-data p {
+    margin-left: 15px;
+  }
+  .calculator .calculator_pay-data .pay-select__icon {
+    margin-left: 110px;
+  }
+  .calculator .calculator_continue {
+    margin: auto;
+    width: 222px;
+    height: 41px;
+  }
+  .calculator .input_money input[type=number] {
+    font-size: 32.744px;
+  }
+  .calculator .input_money {
+    font-size: 32.744px;
+    margin-top: 0;
+  }
+  .calculator .calculator_pay-data .pay-select__body {
+    left: -5%;
+    top: 113%;
+  }
+  .about-us .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .start {
+    height: 1056px;
+  }
+  .start .wrapper {
+    height: 1056px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .start .start_top {
+    display: none;
+  }
+  .start .adaptive {
+    display: none;
+  }
+  .start .mobile {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+  }
+  .start .mobile .start_top {
+    display: block;
+    width: 328px;
+    margin: 0;
+  }
+  .start .mobile .start_top h2 {
+    margin-bottom: 32px;
+  }
+  .start .mobile .start_top button {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  .start .mobile .start_block {
+    width: 328px;
+  }
+  .start .mobile .start_block img {
+    width: 328px;
+  }
+  .countires {
+    height: 887px;
+    background-size: 95%;
+    background-position: 50% 65%;
+  }
+  .countires .wrapper {
+    height: 887px;
+    display: flex;
+    flex-direction: column;
+  }
+  .countires .coutries_lsit {
+    order: 2;
+    margin: auto 0 80px 0;
+    width: auto;
+    height: 56px;
+  }
+  .countires .countrie_list-wrapper {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 56px;
+  }
+  .countires .countrie_block {
+    width: 116px;
+    height: 40px;
+    padding-left: 0;
+    margin: auto 0;
+  }
+  .countires h2 {
+    margin-top: 80px;
+    height: 112px;
+  }
+  .countires h2 br {
+    display: none;
+  }
+  .faq {
+    height: 1216px;
+  }
+  .faq .wrapper {
+    height: 1216px;
+  }
+  .faq .faq-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .faq .text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+  .ad {
+    height: 1000px;
+  }
+  .ad .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .ad h2 {
+    text-align: center;
+  }
+  .ad p {
+    text-align: center;
+  }
+  .ad button {
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  .ad img {
+    height: auto;
+    bottom: -4504px;
+    position: absolute;
+    top: auto;
+    width: 456px;
+    right: 21%;
+  }
+  footer {
+    height: 104px;
+  }
+  footer .wrapper {
+    height: 104px;
+  }
+  footer .links {
+    margin-left: 30px;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  body h2 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  header .header_select {
+    display: none;
+  }
+  .overlay-burger .burger .burger-language {
+    display: block;
+  }
+  .launch-app {
+    margin: auto 0 auto auto;
+  }
+  .banner .under_wrapper {
+    display: none;
+  }
+  .banner .wrapper {
+    flex-direction: column;
+    height: 874px;
+  }
+  .banner .banner_calculator .calculator {
+    top: 494px;
+  }
+  .banner .banner_text {
+    margin-top: 20px;
+  }
+  .about-us .wrapper {
+    justify-content: flex-start;
+  }
+  .about-us p {
+    margin-top: 20px;
+    font-size: 16px;
+    width: auto;
+  }
+  .about-us h2 {
+    margin-bottom: 0;
+  }
+  .start {
+    height: 1550px;
+  }
+  .start .wrapper {
+    height: 1550px;
+  }
+  .start .launch-app {
+    display: none;
+  }
+  .start .launch-app-mobile {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 32px auto 0 auto;
+    width: 100%;
+  }
+  .start .mobile .start_top h2 {
+    width: auto;
+    text-align: center;
+    margin: 0;
+  }
+  .start .mobile .start_top {
+    width: auto;
+    margin: 0 auto;
+  }
+  .start .mobile .start_block {
+    margin: 0 auto;
+  }
+  .start h3 {
+    margin: 16px 0;
+  }
+  .start .mobile .start_block img {
+    margin-top: 32px;
+  }
+  .countires h2 {
+    margin-top: 32px;
+    height: auto;
+  }
+  .countires .countries_buttons {
+    flex-direction: column;
+  }
+  .countires .countries_buttons .launch-app {
+    width: 100%;
+    margin: 24px 0 16px 0;
+  }
+  .countires .countries_buttons .add-countrie {
+    width: 100%;
+    margin: 0;
+  }
+  .countires .coutries_lsit-mobile {
+    display: flex;
+    margin: auto 0 40px -30px;
+    order: 2;
+    width: 680px;
+    height: 56px;
+  }
+  .countires .coutries_lsit-mobile .countrie_list-wrapper {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 56px;
+  }
+  .countires .coutries_lsit-mobile .countrie_block {
+    width: 116px;
+    height: 40px;
+    padding-left: 0;
+    margin: auto 0;
+    justify-content: center;
+  }
+  .countires .coutries_lsit {
+    display: none;
+  }
+  .countires .owl-stage {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0;
+  }
+  .countires .owl-stage-outer {
+    display: flex;
+    width: 640px;
+  }
+  .faq {
+    height: 1340px;
+  }
+  .faq .text {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  .faq .faq-grid {
+    padding-top: 32px;
+  }
+  .faq h2 {
+    margin-bottom: 16px;
+  }
+  .faq .wrapper {
+    height: 1340px;
+  }
+  .ad {
+    height: 850px;
+  }
+  .ad img {
+    bottom: -4942px;
+    right: auto;
+    width: 90%;
+  }
+  footer {
+    height: 224px;
+  }
+  footer .wrapper {
+    height: 224px;
+    display: flex;
+    flex-direction: column;
+  }
+  footer p {
+    text-align: center;
+    margin: 0;
+  }
+  footer .footer_name {
+    margin: 33px 0 24px 0;
+  }
+  footer .links {
+    justify-content: center;
+    margin: 0 0 32px 0;
+  }
+  footer .socials p {
+    flex-basis: 100%;
+    margin: 0 0 16px 0;
+  }
+  footer .socials {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .overlay .popup {
+    width: 288px;
+    height: 328px;
+    top: 30%;
+    padding: 24px;
+  }
+  .overlay .popup h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .overlay .popup p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .overlay .popup .close-popup {
+    right: 2px;
+  }
+  .overlay .popup button {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 75px;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  body h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  header .header_logo a {
+    display: flex;
+  }
+  header .header_logo {
+    border-right: none;
+  }
+  header .header_logo img {
+    width: 97px;
+    height: 24px;
+    margin: auto auto auto 0;
+  }
+  header .header_wrapper {
+    width: 90%;
+  }
+  header button {
+    width: 102px;
+    height: 36px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .banner .under_wrapper {
+    display: none;
+  }
+  .banner .wrapper {
+    flex-direction: column;
+    height: 874px;
+  }
+  .banner .banner_calculator .calculator {
+    top: 494px;
+  }
+  .banner .banner_text {
+    margin-top: 20px;
+  }
+  .banner .banner_text h1 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  .banner .banner_text .launch-app {
+    width: 137px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .banner .banner_text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .banner .clipboard-text img {
+    width: 20px;
+    height: 20px;
+  }
+  .banner .banner_calculator .calculator {
+    width: 288px;
+    height: 362px;
+    margin: 0 auto;
+  }
+  .banner .course {
+    font-size: 8.186px;
+    font-weight: 400;
+    line-height: 12.279px;
+  }
+  .banner .calculator_pay-data {
+    width: 267px;
+  }
+  .banner .calculator_pay-data .pay-select__icon {
+    margin-left: 59px;
+  }
+  .banner .calculator_pay-data .pay-select__body {
+    left: -23%;
+  }
+  .banner .calculator_continue {
+    width: 267px;
+  }
+  .banner .banner_calculator .calcuclator_under .blue-big-circle {
+    position: absolute;
+    right: 20%;
+    top: 10%;
+  }
+  .banner .banner_calculator .calcuclator_under .green-arrow {
+    top: 20px;
+    left: 153px;
+  }
+  .banner .banner_calculator .calcuclator_under .blue-arrow {
+    top: 245px;
+    left: -78px;
+  }
+  .banner .banner_calculator .calculator_top .coin1 {
+    top: 10px;
+    left: 114px;
+  }
+  .banner .banner_calculator .calculator_top .coin2 {
+    width: 91px;
+    height: 82px;
+    top: 10px;
+    left: -12px;
+  }
+  .banner .banner_calculator .calculator_top .coin3 {
+    top: 455px;
+    left: 191px;
+  }
+  .about-us p {
+    font-size: 14px;
+    line-height: 24px;
+    width: auto;
+  }
+  .start .mobile {
+    margin-top: 32px;
+  }
+  .start .mobile .start_top {
+    margin: 0;
+  }
+  .start .mobile .start_top h2 {
+    text-align: start;
+  }
+  .start .mobile .start_block {
+    width: 100%;
+  }
+  .start .mobile .start_block img {
+    width: 100%;
+  }
+  .start .start_number {
+    height: 28px;
+    width: 69px;
+    border-radius: 24px;
+    margin: 24px 0;
+  }
+  .start .start_number p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .start h3 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .start p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .faq {
+    height: 1360px;
+  }
+  .faq .text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .faq .qacontent {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .faq .question p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  footer .socials {
+    width: auto;
+  }
+  .ad p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .ad button {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ad img {
+    bottom: -4961px;
+  }
+  .overlay-burger .burger {
+    width: 192px;
+  }
+  .overlay-burger .burger .burger_menu-closer {
+    right: 5%;
+  }
+  .overlay-burger .burger .burger_navigation ul {
+    padding: 84px 0 24px 24px;
+  }
+  .overlay-burger .burger .burger-language {
+    padding: 0 0 0 24px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
